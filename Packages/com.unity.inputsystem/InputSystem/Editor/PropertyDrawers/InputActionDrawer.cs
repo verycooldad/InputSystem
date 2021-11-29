@@ -53,7 +53,7 @@ namespace UnityEngine.InputSystem.Editor
             if (property == null) return;
 
             property.SetStringValue(nameof(InputAction.m_Id), "");
-            property.SetStringValue(nameof(InputAction.m_Name), "Input Action");
+            property.SetStringValue(nameof(InputAction.m_Name), property.name);
             property.FindPropertyRelative(nameof(InputAction.m_SingletonActionBindings))?.ClearArray();
             property.serializedObject?.ApplyModifiedPropertiesWithoutUndo();
         }
